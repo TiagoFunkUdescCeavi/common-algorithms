@@ -1,8 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <exception>
-
-#include "../Utils/Utils.h"
+#include "../Utils.h"
 
 using namespace std;
 
@@ -22,10 +18,10 @@ void bubble_sort( int * v, int n ){
 }
 
 int main( int argc, char * argv[] ){
-    Instance inst = get_instance( argv[ 1 ] );
+    Int_Vector int_vec = get_int_vector( argv[ 1 ] );
 
-    bubble_sort( inst.numbers, inst.size );
+    bubble_sort( int_vec.numbers, int_vec.size );
 
-    print_instance( inst );
+    print_int_vector( int_vec );
     return 0;
 }

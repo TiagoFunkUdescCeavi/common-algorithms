@@ -1,4 +1,4 @@
-#include "../Utils/Utils.h"
+#include "../Utils.h"
 
 using namespace std;
 
@@ -33,10 +33,10 @@ void heap_sort( int * v, int n ){
  }
 
 int main( int argc, char * argv[] ){
-    Instance inst = get_instance( argv[ 1 ] );
+    Int_Vector int_vec = get_int_vector( argv[ 1 ] );
 
-    heap_sort( inst.numbers, inst.size );
+    heap_sort( int_vec.numbers, int_vec.size );
 
-    print_instance( inst );
+    print_int_vector( int_vec );
     return 0;
 }
